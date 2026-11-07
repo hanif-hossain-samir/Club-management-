@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Day Mode: Clean White Base with Deep-Red University Branding */
+    --color-bg-base: #FFFFFF;
+    --color-bg-muted: #FCF9FA;
+    --color-bg-subtle: #FDF0F3;
+    --color-card: #FFFFFF;
+    --color-border: #F0DEE3;
+    --color-text-main: #141113;
+    --color-text-muted: #61565B;
+    
+    /* University Deep Red (#D40000) */
+    --color-primary: #D40000;
+    --color-primary-hover: #700000;
+    --color-primary-light: #FDF0F3;
+    --color-primary-border: #FAD4DC;
+    --color-accent: #d40000;
+  }
+
+  html.dark, body.dark, .dark {
+    /* Night Mode: Dark and Deep-Red Background */
+    --color-bg-base: #0E0307;
+    --color-bg-muted: #16060D;
+    --color-bg-subtle: #200813;
+    --color-card: #18050E;
+    --color-border: #3A0C1B;
+    --color-text-main: #FFF0F3;
+    --color-text-muted: #BFA5AE;
+    
+    /* Luminous Deep Crimson & Red in Dark Mode */
+    --color-primary: #D40000;
+    --color-primary-hover: #700000;
+    --color-primary-light: #FDF0F3;
+    --color-primary-border: #FAD4DC;
+    --color-accent: #D40000;
+  }
+
+  html {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+

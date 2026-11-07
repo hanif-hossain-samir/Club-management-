@@ -1,0 +1,6 @@
+{
+  "name": "City University Events & Clubs (CUEC)",
+  "description": "Central official portal for City University Events & Clubs (CUEC). Discover Computer Club wings (Programming club, Cyber Security club, Research club), Events & Clubs wings (Sports club, Cultural club, Tour club), event registrations, announcements, and leadership management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
